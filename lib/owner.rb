@@ -67,16 +67,7 @@ class Owner
   end
   
   def list_pets
-    Dog.all.d dog.owner == self 
-        dog
-    end
-       
-    Cat.all.each do |cat|
-      if cat.owner == self
-        cat.mood = 'nervous'
-        cat.owner = nil
-      end
-    end
+    self.dogs + self.cats
   end
     
 end
